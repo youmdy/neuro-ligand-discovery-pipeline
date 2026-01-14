@@ -6,7 +6,7 @@ Given a **brain-disease–related target protein**, this project builds a **~10,
 
 - Proposal (KO, PDF): [docs/proposal-ko.pdf](docs/proposal-ko.pdf)
 - Proposal (KO, DOCX): [docs/proposal-ko.docx](docs/proposal-ko.docx)
-  *English version coming soon.
+  *English version coming soon.*
 
 ---
 
@@ -36,17 +36,17 @@ End-to-end flow:
 
 ```mermaid
 flowchart TD
-  A[Select brain disease / target protein] --> B[Obtain 3D structure\n(PDB / predicted)]
-  B --> C[Build ligand library\n(~10,000)]
-  C --> D[Rule-based physicochemical filtering\n(Lipinski, etc.)\n10,000 -> ~2,000]
-  D --> E[Build training dataset\n(5,000–10,000)]
+  A[Select brain disease / target protein] --> B[Obtain 3D structure (PDB / predicted)]
+  B --> C[Build ligand library (~10,000)]
+  C --> D[Rule-based physicochemical filtering (Lipinski, etc.) 10,000 → ~2,000]
+  D --> E[Build training dataset (5,000–10,000)]
   E --> F[Train & evaluate ML model]
   F --> G[Score ~2,000 candidates]
   G --> H[Select Top 10]
   H --> I[Docking / binding prediction & interaction analysis]
-  I --> J[3D visualization\n(PyMOL / ChimeraX)]
+  I --> J[3D visualization (PyMOL / ChimeraX)]
   J --> K{Optional: generative model?}
-  K -->|Yes| L[Generate novel ligands\n(e.g., Boltzgen)]
+  K -->|Yes| L[Generate novel ligands (e.g., Boltzgen)]
   L --> D
   K -->|No| M[Finalize report & package results]
 ```
@@ -138,24 +138,6 @@ flowchart TD
 - Results (Top 10 summary + docking/interaction analysis + 3D visuals)
 - Documentation (proposal, final report, optional slides)
 
----
-
-## Recommended Repo Layout
-```
-.
-├─ README.md
-├─ docs/
-│  ├─ proposal.pdf
-│  └─ proposal.docx
-├─ src/
-├─ data/
-│  ├─ raw/
-│  └─ processed/
-└─ assets/
-   └─ figures/
-```
-
----
 
 ## References
 - Lipinski CA et al. (2001)  
