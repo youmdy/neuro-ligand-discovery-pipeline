@@ -36,19 +36,19 @@ End-to-end flow:
 
 ```mermaid
 flowchart TD
-  A[Select brain disease / target protein] --> B[Obtain 3D structure (PDB / predicted)]
-  B --> C[Build ligand library (~10,000)]
-  C --> D[Rule-based physicochemical filtering (Lipinski, etc.) 10,000 → ~2,000]
-  D --> E[Build training dataset (5,000–10,000)]
-  E --> F[Train & evaluate ML model]
-  F --> G[Score ~2,000 candidates]
-  G --> H[Select Top 10]
-  H --> I[Docking / binding prediction & interaction analysis]
-  I --> J[3D visualization (PyMOL / ChimeraX)]
-  J --> K{Optional: generative model?}
-  K -->|Yes| L[Generate novel ligands (e.g., Boltzgen)]
+  A[Select brain disease / target protein] --> B["Obtain 3D structure (PDB / predicted)"]
+  B --> C["Build ligand library (~10,000)"]
+  C --> D["Rule-based physicochemical filtering (Lipinski, etc.) 10,000 → ~2,000"]
+  D --> E["Build training dataset (5,000–10,000)"]
+  E --> F["Train & evaluate ML model"]
+  F --> G["Score ~2,000 candidates"]
+  G --> H["Select Top 10"]
+  H --> I["Docking / binding prediction & interaction analysis"]
+  I --> J["3D visualization (PyMOL / ChimeraX)"]
+  J --> K{"Optional: generative model?"}
+  K -->|Yes| L["Generate novel ligands (e.g., Boltzgen)"]
   L --> D
-  K -->|No| M[Finalize report & package results]
+  K -->|No| M["Finalize report & package results"]
 ```
 
 ---
