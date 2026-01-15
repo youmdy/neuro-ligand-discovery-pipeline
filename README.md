@@ -6,7 +6,7 @@ Given a **brain-disease–related target protein**, this project builds a **~10,
 
 - Proposal (KO, PDF): [docs/proposal-ko.pdf](docs/proposal-ko.pdf)
 - Proposal (KO, DOCX): [docs/proposal-ko.docx](docs/proposal-ko.docx)
-  *English version coming soon.*
+  <br/>*English version coming soon.*
 
 ---
 
